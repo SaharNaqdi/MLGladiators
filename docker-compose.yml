@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  api:
+    image: api:v0.0.12
+    container_name: api
+    hostname: api
+    restart: always
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./t5_translator1/:/app/t5_translator1/
+      # - ./huggingface/:/root/.cache/huggingface/
